@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import zoo.Pandas;
+import zoo.Zoo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -32,7 +34,7 @@ public class ZooTest
     @BeforeEach
     public void setUp()
     {
-        zoo = new Zoo("Zoo");
+        zoo = new Zoo("zoo.Zoo");
         pandas1 = new Pandas("chutian",24);
         pandas2 = new Pandas("ningxin",23);
 
@@ -52,7 +54,7 @@ public class ZooTest
 
 //    @Test
 //    public void testAddPanda() {
-//        List<Pandas> pandaList = zoo.getPandaList();
+//        List<zoo.Pandas> pandaList = zoo.getPandaList();
 //
 //        assertEquals(2, pandaList.size());
 //
@@ -70,7 +72,7 @@ public class ZooTest
 
     @Test
     public void newTestRegisterPanda() {
-        Zoo zoo = new Zoo("Dauphine Zoo");
+        Zoo zoo = new Zoo("Dauphine zoo.Zoo");
         Pandas panda = new Pandas("BaoBao", 5);
 
         zoo.registerPanda(panda);

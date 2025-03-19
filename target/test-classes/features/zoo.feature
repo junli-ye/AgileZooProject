@@ -1,6 +1,6 @@
-Feature: Gestion du Zoo
+Feature: Manage Pandas in the Zoo
 
-  Scenario: Ajouter un panda au zoo
-    Given un zoo vide
-    When j'ajoute un panda nommé "Chutian"
-    Then le zoo contient 1 panda
+  Scenario: Add a panda to the zoo
+    Given an empty zoo
+    When I add a panda named "Bao" aged 5 years
+    Then the zoo contains 1 panda

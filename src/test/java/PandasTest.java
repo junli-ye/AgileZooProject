@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import zoo.Pandas;
+import zoo.Zoo;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PandasTest
 {
-    private Pandas po;
+    private Pandas pandas;
     /**
      * Default constructor for test class PandasTest
      */
@@ -29,7 +31,7 @@ public class PandasTest
     public void setUp()
     {
         System.out.println("BeforeEach is running...");
-        po = new Pandas("Po", 5);
+        pandas = new Pandas("Po", 5);
     }
 
     /**
@@ -44,37 +46,37 @@ public class PandasTest
     
     @Test
     public void testGetName() {
-        assertEquals("Po", po.getName(), "getName() failed");
+        assertEquals("Po", pandas.getName(), "getName() failed");
     }
     
     @Test
     public void testSetName() {
-        po.setName("Bamboo");
-        assertEquals("Bamboo", po.getName(), "setName() failed");
+        pandas.setName("Bamboo");
+        assertEquals("Bamboo", pandas.getName(), "setName() failed");
     }
     
     @Test
     public void testGetAge() {
-        assertEquals(5, po.getAge(), "getAge() failed");
+        assertEquals(5, pandas.getAge(), "getAge() failed");
     }
     
     @Test
     public void testSetAge() {
-        po.setAge(6);
-        assertEquals(6, po.getAge(), "setAge() failed");
+        pandas.setAge(6);
+        assertEquals(6, pandas.getAge(), "setAge() failed");
     }
     
     @Test
     public void testMakeSound() {
-        assertEquals("Po squeaks!", po.makeSound(), "makeSound() failed");
+        assertEquals("Po squeaks!", pandas.makeSound(), "makeSound() failed");
     }
 
     @Test
     public void testSetAndGetZoo() {
-        assertNull(po.getZoo());
+        assertNull(pandas.getZoo());
         Zoo testZoo = new Zoo("testZoo");
-        po.setZoo(testZoo);
-        assertEquals(testZoo, po.getZoo(), "getZoo() failed");
+        pandas.setZoo(testZoo);
+        assertEquals(testZoo, pandas.getZoo(), "getZoo() failed");
     }
 
     @Test
