@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hero {
-    protected String name;
-    protected int xp;
-    protected List<Skill> skills; // Hero corresponds to multiple Skills : (0.. *)
+    private String name;
+    private int xp;
+    private List<Skill> skills; // Hero corresponds to multiple Skills : (0.. *)
 
-    public Hero(String name, int healthPoints) {
+    public Hero(String name, int xp) {
         this.name = name;
-        this.xp = healthPoints;
+        this.xp = xp;
         this.skills = new ArrayList<>();
     }
 
