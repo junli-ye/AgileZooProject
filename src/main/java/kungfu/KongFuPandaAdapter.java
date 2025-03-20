@@ -16,6 +16,19 @@ import java.util.Random;
 public class KongFuPandaAdapter extends Panda {
     private Hero hero;
     private PandaState state;
+    private Random random;
+
+    public KongFuPandaAdapter(String name, int age) {
+        super(name, age);
+        this.hero = new Hero(name, 100);
+        this.random = new Random();
+    }
+
+    public KongFuPandaAdapter(String name, int age, Random random) {
+        super(name, age);
+        this.hero = new Hero(name, 100);
+        this.random = random;
+    }
 
     private static final List<String> SKILL_POOL = List.of(
             "Coup de Poing Rapide", "Coup de Pied Tornade", "Esquive de Tigre", "Frappe du Dragon",
@@ -32,18 +45,13 @@ public class KongFuPandaAdapter extends Panda {
     public void setState(PandaState state) {
         this.state = state;
     }
-    
-    public void train() {
-        state.train(this);
-    }
-    
-    public void fight() {
-        state.fight(this);
+
+    public int getHeroXp() {
+        return this.hero.getXp();
     }
 
-    public KongFuPandaAdapter(String name, int age) {
-        super(name, age);
-        this.hero = new Hero(name, 100);
+    public List<Skill> getHeroSkills() {
+        return this.hero.getSkills();
     }
 
     private void addXp(int toAddXp) {
@@ -52,8 +60,6 @@ public class KongFuPandaAdapter extends Panda {
     }
 
     public void exercise() {
-        Random random = new Random();
-
         // Randomly increase 1-30 points XP
         int gainedXp = random.nextInt(30) + 1;  // Generate random numbers between 1-30
         this.addXp(gainedXp);
@@ -85,5 +91,6 @@ public class KongFuPandaAdapter extends Panda {
             exercise();
         }
     }
+
 
 }
