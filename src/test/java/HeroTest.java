@@ -14,7 +14,7 @@ public class HeroTest {
     @Test
     public void testHeroInitialization() {
         assertEquals("NEC", hero.getName());
-        assertEquals(100, hero.getHealthPoints());
+        assertEquals(100, hero.getXp());
         assertTrue(hero.getSkills().isEmpty());
     }
 
@@ -23,7 +23,7 @@ public class HeroTest {
     public void testTakeDamageValid() {
         hero.takeDamage(30);
         hero.takeDamage(20);
-        assertEquals(50, hero.getHealthPoints());
+        assertEquals(50, hero.getXp());
     }
 
     // takeDamage boundary value test: error with negative number
@@ -36,7 +36,7 @@ public class HeroTest {
     @Test
     public void testLevelUp() {
         hero.levelUp(3);
-        assertEquals(130, hero.getHealthPoints());
+        assertEquals(130, hero.getXp());
     }
 
     // levelUp boundary value test: error with negative number

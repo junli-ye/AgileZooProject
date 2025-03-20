@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hero {
-    private String name;
-    private int healthPoints; // Rename: `health` to `healthPoints` to improve readability
-    private List<Skill> skills; // Hero corresponds to multiple Skills : (0.. *)
+    protected String name;
+    protected int xp;
+    protected List<Skill> skills; // Hero corresponds to multiple Skills : (0.. *)
 
     public Hero(String name, int healthPoints) {
         this.name = name;
-        this.healthPoints = healthPoints;
+        this.xp = healthPoints;
         this.skills = new ArrayList<>();
     }
 
@@ -22,12 +22,12 @@ public class Hero {
         this.name = name;
     }
 
-    public int getHealthPoints() {
-        return healthPoints;
+    public int getXp() {
+        return xp;
     }
 
-    public void setHealthPoints(int healthPoints) {
-        this.healthPoints = healthPoints;
+    public void setXp(int xp) {
+        this.xp = xp;
     }
 
     public List<Skill> getSkills() {
@@ -42,16 +42,15 @@ public class Hero {
         if (damage < 0) {
             throw new IllegalArgumentException("Damage cannot be negative.");
         }
-        healthPoints -= damage;
+        xp -= damage;
     }
 
     public void addSkill(Skill skill) {
-        // 避免重复学习技能
         if (skills.stream().anyMatch(s -> s.getSkillName().equals(skill.getSkillName()))) {
             throw new IllegalArgumentException("Skill " + skill.getSkillName() + " already learned!");
         }
         skills.add(skill);
-        skill.setHero(this); //维护双向关系
+        skill.setHero(this);
     }
 
     public void removeSkill(Skill skill) {
@@ -79,6 +78,6 @@ public class Hero {
         if (increase < 0) {
             throw new IllegalArgumentException("Level increase must be positive.");
         }
-        healthPoints += increase * 10;
+        xp += increase * 10;
     }
 }

@@ -22,6 +22,6 @@ public class HeroLevelUpSteps {
 
     @Then("the hero's health should be {int}")
     public void the_hero_s_health_should_be(int expectedHealth) {
-        assertEquals(expectedHealth, hero.getHealthPoints());
+        assertEquals(expectedHealth, hero.getXp());
     }
 }
