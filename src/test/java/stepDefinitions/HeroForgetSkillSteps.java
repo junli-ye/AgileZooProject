@@ -1,9 +1,10 @@
 package stepDefinitions;
-import com.example.dota2.Hero;
-import com.example.dota2.Skill;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import zoo.Hero;
+import zoo.Skill;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class HeroForgetSkillSteps {

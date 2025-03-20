@@ -1,5 +1,5 @@
-import com.example.dota2.Hero;
-import com.example.dota2.Skill;
+import zoo.Hero;
+import zoo.Skill;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

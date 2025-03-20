@@ -1,9 +1,10 @@
 package stepDefinitions;
 
-import com.example.dota2.Hero;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import zoo.Hero;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class HeroSteps {
