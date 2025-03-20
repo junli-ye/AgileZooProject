@@ -1,22 +1,20 @@
-package adapter;
+package kungfu;
 
 import hero.Hero;
 import hero.Skill;
-import state.PandaState;
 import zoo.Panda;
 
 import java.util.List;
 import java.util.Random;
 
 /**
- * @className: adapter.KongFuPandaAdapter
+ * @className: kungfu.KongFuPandaAdapter
  * @author: Junli YE, junli.ye@dauphine.eu
  * @description: Adapter Pattern: PandaAdapter combines Panda (from Zoo) and Hero (from Hero system)
  * @date: 20/03/2025 14:14
  */
 public class KongFuPandaAdapter extends Panda {
     private Hero hero;
-    private boolean kongFuPanda;
     private PandaState state;
 
     private static final List<String> SKILL_POOL = List.of(
@@ -46,7 +44,6 @@ public class KongFuPandaAdapter extends Panda {
     public KongFuPandaAdapter(String name, int age) {
         super(name, age);
         this.hero = new Hero(name, 100);
-        this.kongFuPanda = false;
     }
 
     private void addXp(int toAddXp) {
@@ -75,7 +72,6 @@ public class KongFuPandaAdapter extends Panda {
 
         // 3. Determine if a Kung Fu Panda
         if(this.isKungFuPanda()) {
-            this.kongFuPanda = true;
             System.out.println("\uD83C\uDFC6 KONG FU PANDA !");
         }
     }
