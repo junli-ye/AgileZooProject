@@ -26,7 +26,7 @@ public class HeroForgetSkillSteps {
     @Then("the hero should not have a skill named {string}")
     public void the_hero_should_not_have_a_skill_named(String expectedSkillName) {
         boolean hasSkill = hero.getSkills().stream()
-                .anyMatch(s -> s.getSkillName().equals(expectedSkillName));
+                .anyMatch(s -> s.getName().equals(expectedSkillName));
         assertFalse(hasSkill, "Hero should not have the skill: " + expectedSkillName);
     }
 }
