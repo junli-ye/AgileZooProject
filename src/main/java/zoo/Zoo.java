@@ -26,7 +26,7 @@ public class Zoo
         return name;
     }
 
-    private List<Panda> getPandaList() {
+    public List<Panda> getPandaList() {
         return pandaList;
     }
 

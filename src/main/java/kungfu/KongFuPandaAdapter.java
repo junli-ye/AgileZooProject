@@ -45,6 +45,10 @@ public class KongFuPandaAdapter extends Panda {
     public void setState(PandaState state) {
         this.state = state;
     }
+    
+    public PandaState getState() {
+        return this.state;
+    }
 
     public int getHeroXp() {
         return this.hero.getXp();
@@ -68,7 +72,7 @@ public class KongFuPandaAdapter extends Panda {
         System.out.println("XP gagné : " + gainedXp + "  (Total XP : " + this.hero.getXp() + ")");
 
         // 2. Randomly decide whether to acquire a new skill (5% probability)
-        if (random.nextBoolean()) {
+        if (random.nextInt(100) < 5) {
             String newSkill = SKILL_POOL.get(random.nextInt(SKILL_POOL.size()));
             this.hero.addSkill(new Skill(newSkill, 100));
             System.out.println("Félicitations ! " + this.getName() + " a appris une nouvelle compétence : " + newSkill + " !");
@@ -91,6 +95,9 @@ public class KongFuPandaAdapter extends Panda {
             exercise();
         }
     }
-
-
+    
+    
+    
+    
+    
 }
