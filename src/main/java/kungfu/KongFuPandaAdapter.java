@@ -67,8 +67,8 @@ public class KongFuPandaAdapter extends Panda {
         System.out.println(this.getName() + " s'entraîne ! ");
         System.out.println("XP gagné : " + gainedXp + "  (Total XP : " + this.hero.getXp() + ")");
 
-        // 2. Randomly decide whether to acquire a new skill (50% probability)
-        if (random.nextBoolean()) {
+        // 2. Randomly decide whether to acquire a new skill (5% probability)
+        if (random.nextInt(100) < 5) {
             String newSkill = SKILL_POOL.get(random.nextInt(SKILL_POOL.size()));
             this.hero.addSkill(new Skill(newSkill, 100));
             System.out.println("Félicitations ! " + this.getName() + " a appris une nouvelle compétence : " + newSkill + " !");
