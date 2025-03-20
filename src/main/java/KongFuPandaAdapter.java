@@ -13,6 +13,7 @@ import java.util.Random;
  */
 public class KongFuPandaAdapter extends Panda {
     private Hero hero;
+    private boolean kongFuPanda;
 
     private static final List<String> SKILL_POOL = List.of(
             "Coup de Poing Rapide", "Coup de Pied Tornade", "Esquive de Tigre", "Frappe du Dragon",
@@ -25,6 +26,7 @@ public class KongFuPandaAdapter extends Panda {
     public KongFuPandaAdapter(String name, int age) {
         super(name, age);
         this.hero = new Hero(name, 100);
+        this.kongFuPanda = false;
     }
 
     private void addXp(int toAddXp) {
@@ -53,12 +55,19 @@ public class KongFuPandaAdapter extends Panda {
 
         // 3. Determine if a Kung Fu Panda
         if(this.isKungFuPanda()) {
+            this.kongFuPanda = true;
             System.out.println("\uD83C\uDFC6 KONG FU PANDA !");
         }
     }
 
     private boolean isKungFuPanda() {
         return this.hero.getXp() >= 1000 && this.hero.getSkills().size() >= 10;
+    }
+
+    public void intensiveTraining() {
+        for(int i = 0; i < 5; i++) {
+            exercise();
+        }
     }
 
 }
