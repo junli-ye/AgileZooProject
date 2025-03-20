@@ -27,19 +27,19 @@ public class KongFuPandaAdapter extends Panda {
             "Énergie de Feu", "Plongeon Rapide", "Frappe Fantôme", "Vitesse de l’Éclair"
     );
     
-    public Hero getHero() { // 添加 getter 方法
+    public Hero getHero() {
         return this.hero;
     }
     
-    public void setState(PandaState state) { // 添加 setState 方法
+    public void setState(PandaState state) {
         this.state = state;
     }
     
-    public void train() { // 使用状态模式
+    public void train() {
         state.train(this);
     }
     
-    public void fight() { // 使用状态模式
+    public void fight() {
         state.fight(this);
     }
 
