@@ -1,12 +1,15 @@
+package adapter;
+
 import hero.Hero;
 import hero.Skill;
+import state.PandaState;
 import zoo.Panda;
 
 import java.util.List;
 import java.util.Random;
 
 /**
- * @className: KongFuPandaAdapter
+ * @className: adapter.KongFuPandaAdapter
  * @author: Junli YE, junli.ye@dauphine.eu
  * @description: Adapter Pattern: PandaAdapter combines Panda (from Zoo) and Hero (from Hero system)
  * @date: 20/03/2025 14:14
@@ -14,6 +17,7 @@ import java.util.Random;
 public class KongFuPandaAdapter extends Panda {
     private Hero hero;
     private boolean kongFuPanda;
+    private PandaState state;
 
     private static final List<String> SKILL_POOL = List.of(
             "Coup de Poing Rapide", "Coup de Pied Tornade", "Esquive de Tigre", "Frappe du Dragon",
@@ -22,6 +26,22 @@ public class KongFuPandaAdapter extends Panda {
             "Aura de Combat", "Frappe Explosive", "Danse du Singe", "Hurlement du Loup",
             "Énergie de Feu", "Plongeon Rapide", "Frappe Fantôme", "Vitesse de l’Éclair"
     );
+    
+    public Hero getHero() { // 添加 getter 方法
+        return this.hero;
+    }
+    
+    public void setState(PandaState state) { // 添加 setState 方法
+        this.state = state;
+    }
+    
+    public void train() { // 使用状态模式
+        state.train(this);
+    }
+    
+    public void fight() { // 使用状态模式
+        state.fight(this);
+    }
 
     public KongFuPandaAdapter(String name, int age) {
         super(name, age);
