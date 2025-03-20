@@ -1,4 +1,4 @@
-package zoo;
+package hero;
 
 public class Skill {
     private String skillName;
