@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import zoo.Pandas;
 import zoo.Zoo;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -52,23 +54,23 @@ public class ZooTest
     {
     }
 
-//    @Test
-//    public void testAddPanda() {
-//        List<zoo.Pandas> pandaList = zoo.getPandaList();
-//
-//        assertEquals(2, pandaList.size());
-//
-//        assertTrue(pandaList.contains(pandas1));
-//        assertTrue(pandaList.contains(pandas2));
-//
-//        assertEquals(zoo, pandas1.getZoo());
-//        assertEquals(zoo, pandas2.getZoo());
-//    }
+    @Test
+    public void testAddPanda() {
+        List<Pandas> pandaList = zoo.getPandaList();
 
-//    @Test
-//    public void TestFeedAllPandas() {
-//        zoo.feedPandas();
-//    }
+        assertEquals(2, pandaList.size());
+
+        assertTrue(pandaList.contains(pandas1));
+        assertTrue(pandaList.contains(pandas2));
+
+        assertEquals(zoo, pandas1.getZoo());
+        assertEquals(zoo, pandas2.getZoo());
+    }
+
+    @Test
+    public void TestFeedAllPandas() {
+        zoo.feedPandas();
+    }
 
     @Test
     public void newTestRegisterPanda() {
