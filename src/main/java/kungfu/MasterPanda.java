@@ -5,7 +5,7 @@ public class MasterPanda implements PandaState {
 	@Override
 	public void train(KongFuPandaAdapter panda) {
 		System.out.println(panda.getName() + " effectue une formation de maître !");
-		panda.exercise();;
+		panda.exercise();
 	}
 	
 	@Override

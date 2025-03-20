@@ -73,11 +73,6 @@ public class KongFuPandaAdapterTest {
 
     @Test
     void shouldBecomeKungFuPanda() {
-        // Add 9 skills
-        for (int i = 1; i <= 10; i++) {
-            panda.getHeroSkills().add(new Skill("Skill" + i, 100));
-        }
-
         // Mock: XP +30, always learn skill
         panda = new KongFuPandaAdapter("Po", 5, getFixedRandom(29, true));
 
