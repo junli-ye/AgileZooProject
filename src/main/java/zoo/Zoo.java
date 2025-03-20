@@ -26,8 +26,17 @@ public class Zoo
         return name;
     }
 
-    public List<Pandas> getPandaList() {
+    private List<Pandas> getPandaList() {
         return pandaList;
+    }
+
+//    Encaspulation d'une association
+    public int getZooSize() {
+        return this.pandaList.size();
+    }
+
+    public boolean isPandaInZoo(Pandas panda) {
+        return this.pandaList.contains(panda);
     }
 
     public void registerPanda(Pandas panda) {

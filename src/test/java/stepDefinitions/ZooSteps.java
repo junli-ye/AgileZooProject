@@ -24,6 +24,6 @@ public class ZooSteps {
 	
 	@Then("the zoo contains {int} panda")
 	public void the_zoo_contains_panda(int count) {
-		Assertions.assertEquals(count, zoo.getPandaList().size());
+		Assertions.assertEquals(count, zoo.getZooSize());
 	}
 }
