@@ -6,14 +6,14 @@ package zoo;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Pandas
+public class Panda
 {
     private String name;
     private int age;
     private Zoo zoo;
     private boolean isHungry;
 
-    public Pandas(String name, int age) {
+    public Panda(String name, int age) {
         this.name = name;
         this.age = age;
         this.zoo = null;

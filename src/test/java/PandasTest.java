@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import zoo.Pandas;
+import zoo.Panda;
 import zoo.Zoo;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class PandasTest
 {
-    private Pandas pandas;
+    private Panda pandas;
     /**
      * Default constructor for test class PandasTest
      */
@@ -31,7 +31,7 @@ public class PandasTest
     public void setUp()
     {
         System.out.println("BeforeEach is running...");
-        pandas = new Pandas("Po", 5);
+        pandas = new Panda("Po", 5);
     }
 
     /**
@@ -81,7 +81,7 @@ public class PandasTest
 
     @Test
     public void testPandaIsHungry() {
-        Pandas panda = new Pandas("LingLing", 4);
+        Panda panda = new Panda("LingLing", 4);
         assertTrue(panda.isHungry());
         panda.eat();
         assertFalse(panda.isHungry());

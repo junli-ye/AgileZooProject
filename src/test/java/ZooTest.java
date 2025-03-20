@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import zoo.Pandas;
+import zoo.Panda;
 import zoo.Zoo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,8 +16,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class ZooTest
 {
     private Zoo zoo; 
-    private Pandas pandas1;
-    private Pandas pandas2;
+    private Panda pandas1;
+    private Panda pandas2;
     
     /**
      * Default constructor for test class ZooTest
@@ -35,8 +35,8 @@ public class ZooTest
     public void setUp()
     {
         zoo = new Zoo("zoo.Zoo");
-        pandas1 = new Pandas("chutian",24);
-        pandas2 = new Pandas("ningxin",23);
+        pandas1 = new Panda("chutian",24);
+        pandas2 = new Panda("ningxin",23);
 
         zoo.registerPanda(pandas1);
         zoo.registerPanda(pandas2);
@@ -71,7 +71,7 @@ public class ZooTest
     @Test
     public void newTestRegisterPanda() {
         Zoo zoo = new Zoo("Dauphine zoo.Zoo");
-        Pandas panda = new Pandas("BaoBao", 5);
+        Panda panda = new Panda("BaoBao", 5);
 
         zoo.registerPanda(panda);
 

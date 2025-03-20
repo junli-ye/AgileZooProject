@@ -11,7 +11,7 @@ import java.util.List;
 public class Zoo
 {
     private String name;
-    private List<Pandas> pandaList;
+    private List<Panda> pandaList;
 
     /**
      * Constructor for objects of class zoo.Zoo
@@ -26,7 +26,7 @@ public class Zoo
         return name;
     }
 
-    private List<Pandas> getPandaList() {
+    private List<Panda> getPandaList() {
         return pandaList;
     }
 
@@ -35,29 +35,29 @@ public class Zoo
         return this.pandaList.size();
     }
 
-    public boolean isPandaInZoo(Pandas panda) {
+    public boolean isPandaInZoo(Panda panda) {
         return this.pandaList.contains(panda);
     }
 
-    public void registerPanda(Pandas panda) {
+    public void registerPanda(Panda panda) {
         if (!isPandaRegisted(panda)) {
             register(panda);
         }
     }
 
-    private void register(Pandas panda) {
+    private void register(Panda panda) {
         pandaList.add(panda);
         panda.setZoo(this);
     }
 
-    private boolean isPandaRegisted(Pandas panda) {
+    private boolean isPandaRegisted(Panda panda) {
         return pandaList.contains(panda);
     }
 
     public void feedPandas() {
         if (pandaList.size() == 0) System.err.println("The zoo is empty.");
         System.out.println("The zookeeper is feeding the pandas at " + name + "...");
-        for (Pandas pandas : pandaList) {
+        for (Panda pandas : pandaList) {
             pandas.eat(); 
         }
     }

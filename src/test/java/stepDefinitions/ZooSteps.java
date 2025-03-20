@@ -5,11 +5,11 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import org.junit.jupiter.api.Assertions;
 import zoo.Zoo;
-import zoo.Pandas;
+import zoo.Panda;
 
 public class ZooSteps {
 	private Zoo zoo;
-	private Pandas panda;
+	private Panda panda;
 	
 	@Given("an empty zoo")
 	public void an_empty_zoo() {
@@ -18,7 +18,7 @@ public class ZooSteps {
 	
 	@When("I add a panda named {string} aged {int} years")
 	public void i_add_a_panda_named_aged_years(String name, int age) {
-		panda = new Pandas(name, age);
+		panda = new Panda(name, age);
 		zoo.registerPanda(panda);
 	}
 	
