@@ -26,7 +26,7 @@ public class HeroLearnSkillSteps {
     @Then("the hero should have a skill named {string}")
     public void the_hero_should_have_a_skill_named(String expectedSkillName) {
         boolean hasSkill = hero.getSkills().stream()
-                .anyMatch(skill -> skill.getSkillName().equals(expectedSkillName));
+                .anyMatch(skill -> skill.getName().equals(expectedSkillName));
         assertTrue(hasSkill, "Hero should have the skill: " + expectedSkillName);
     }
 

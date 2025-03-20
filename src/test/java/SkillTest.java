@@ -14,7 +14,7 @@ public class SkillTest {
 
     @Test
     public void testSkillInitialization() {
-        assertEquals("Death Pulse", skill.getSkillName());
+        assertEquals("Death Pulse", skill.getName());
         assertEquals(120, skill.getDamage());
         assertNull(skill.getHero());
     }

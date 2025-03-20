@@ -46,8 +46,8 @@ public class Hero {
     }
 
     public void addSkill(Skill skill) {
-        if (skills.stream().anyMatch(s -> s.getSkillName().equals(skill.getSkillName()))) {
-            throw new IllegalArgumentException("Skill " + skill.getSkillName() + " already learned!");
+        if (skills.stream().anyMatch(s -> s.getName().equals(skill.getName()))) {
+            throw new IllegalArgumentException("Skill " + skill.getName() + " already learned!");
         }
         skills.add(skill);
         skill.setHero(this);
